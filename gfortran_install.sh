@@ -755,10 +755,6 @@ do
 			cd $dirName
 		    fi
 		    # Hardwired magic.
-		    # For HDF5, fix non-compliant comments (by simply removing such comment lines).
-		    if [ $i -eq $iHDF5 ]; then
-			find . -name "*.c" | xargs sed -r -i~ /"^\s*\/\/"/d
-		    fi
      		    # Check for Python package.
 		    if [ -z "${buildEnvironment[$i]}" ]; then
 			isPython=0

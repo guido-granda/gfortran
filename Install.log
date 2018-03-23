@@ -1,0 +1,340 @@
+Gfortran install log
+Linux asusrog 4.13.0-37-generic #42~16.04.1-Ubuntu SMP Wed Mar 7 16:03:28 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+Libraries and Perl modules will be installed as regular user
+Full install
+Will use 2 cores for compiling
+Checking for required tools and libraries...
+ Testing presence of gcc
+  gcc is present - testing version
+  Found version 8.0.1 of gcc
+  Test results for gcc: 4.0.0 9.9.9
+gcc - found
+ Testing presence of g++
+  g++ is present - testing version
+  Found version 8.0.1 of g++
+  Test results for g++: 4.0.0 9.9.9
+g++ - found
+ Testing presence of gfortran
+  gfortran is present - testing version
+  Found version 8.0.1 of gfortran
+  Test results for gfortran: 7.9.9 9.9.9
+gfortran - found
+ Testing presence of apr
+dummy.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main() {}
+ ^~~~
+  apr is present - testing version
+  Found version 1.6.3 of apr
+  Test results for apr: 0.0.0 99.99.99
+apr - found
+ Testing presence of apr-util
+dummy.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main() {}
+ ^~~~
+/usr/lib/x86_64-linux-gnu/libaprutil-1.so: undefined reference to `apr_os_uuid_get'
+collect2: error: ld returned 1 exit status
+apr-util - not found - will be installed
+   Installing from source
+--> wget "http://www-us.apache.org/dist//apr/apr-util-1.6.1.tar.bz2"
+--2018-03-23 11:59:51--  http://www-us.apache.org/dist//apr/apr-util-1.6.1.tar.bz2
+Resolving www-us.apache.org (www-us.apache.org)... 140.211.11.105
+Connecting to www-us.apache.org (www-us.apache.org)|140.211.11.105|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 428595 (419K) [application/x-bzip2]
+Saving to: ‘apr-util-1.6.1.tar.bz2.4’
+
+     0K .......... .......... .......... .......... .......... 11%  293K 1s
+    50K .......... .......... .......... .......... .......... 23%  592K 1s
+   100K .......... .......... .......... .......... .......... 35% 5.14M 0s
+   150K .......... .......... .......... .......... .......... 47%  670K 0s
+   200K .......... .......... .......... .......... .......... 59% 57.7M 0s
+   250K .......... .......... .......... .......... .......... 71% 5.37M 0s
+   300K .......... .......... .......... .......... .......... 83% 75.0M 0s
+   350K .......... .......... .......... .......... .......... 95%  675K 0s
+   400K .......... ........                                   100% 43.0M=0.4s
+
+2018-03-23 11:59:52 (986 KB/s) - ‘apr-util-1.6.1.tar.bz2.4’ saved [428595/428595]
+
+--> tar xvfj apr-util-1.6.1.tar.bz2
+apr-util-1.6.1/
+apr-util-1.6.1/strmatch/
+apr-util-1.6.1/strmatch/apr_strmatch.c
+apr-util-1.6.1/uri/
+apr-util-1.6.1/uri/apr_uri.c
+apr-util-1.6.1/apr-util.spec
+apr-util-1.6.1/README.FREETDS
+apr-util-1.6.1/ldap/
+apr-util-1.6.1/ldap/NWGNUmakefile
+apr-util-1.6.1/ldap/apr_ldap_init.c
+apr-util-1.6.1/ldap/apr_ldap_url.c
+apr-util-1.6.1/ldap/apr_ldap.dsp
+apr-util-1.6.1/ldap/apr_ldap.mak
+apr-util-1.6.1/ldap/apr_ldap_rebind.c
+apr-util-1.6.1/ldap/apr_ldap.dep
+apr-util-1.6.1/ldap/apr_ldap_option.c
+apr-util-1.6.1/ldap/apr_ldap_stub.c
+apr-util-1.6.1/libaprutil.dsp
+apr-util-1.6.1/Makefile.win
+apr-util-1.6.1/CMakeLists.txt
+apr-util-1.6.1/configure.in
+apr-util-1.6.1/NOTICE
+apr-util-1.6.1/redis/
+apr-util-1.6.1/redis/apr_redis.c
+apr-util-1.6.1/config.layout
+apr-util-1.6.1/apr-util.pc.in
+apr-util-1.6.1/dbd/
+apr-util-1.6.1/dbd/apr_dbd_sqlite3.c
+apr-util-1.6.1/dbd/apr_dbd_oracle.dsp
+apr-util-1.6.1/dbd/apr_dbd_mysql.c
+apr-util-1.6.1/dbd/apr_dbd_sqlite2.dep
+apr-util-1.6.1/dbd/NWGNUdbdsqli3
+apr-util-1.6.1/dbd/apr_dbd_mysql.dsp
+apr-util-1.6.1/dbd/apr_dbd_mysql.mak
+apr-util-1.6.1/dbd/unsupported/
+apr-util-1.6.1/dbd/unsupported/apr_dbd_freetds.dep
+apr-util-1.6.1/dbd/unsupported/apr_dbd_freetds.dsp
+apr-util-1.6.1/dbd/unsupported/NWGNUdbdfreetds
+apr-util-1.6.1/dbd/unsupported/apr_dbd_freetds.mak
+apr-util-1.6.1/dbd/unsupported/apr_dbd_freetds.c
+apr-util-1.6.1/dbd/apr_dbd_sqlite3.mak
+apr-util-1.6.1/dbd/apr_dbd_sqlite2.c
+apr-util-1.6.1/dbd/apr_dbd_sqlite3.dsp
+apr-util-1.6.1/dbd/NWGNUmakefile
+apr-util-1.6.1/dbd/apr_dbd_pgsql.dsp
+apr-util-1.6.1/dbd/apr_dbd.c
+apr-util-1.6.1/dbd/apr_dbd_oracle.mak
+apr-util-1.6.1/dbd/NWGNUdbdpgsql
+apr-util-1.6.1/dbd/apr_dbd_odbc.mak
+apr-util-1.6.1/dbd/apr_dbd_odbc.c
+apr-util-1.6.1/dbd/NWGNUdbdsqli2
+apr-util-1.6.1/dbd/apr_dbd_pgsql.dep
+apr-util-1.6.1/dbd/apr_dbd_odbc.dsp
+apr-util-1.6.1/dbd/apr_dbd_pgsql.c
+apr-util-1.6.1/dbd/apr_dbd_sqlite3.dep
+apr-util-1.6.1/dbd/apr_dbd_sqlite2.dsp
+apr-util-1.6.1/dbd/apr_dbd_mysql.dep
+apr-util-1.6.1/dbd/NWGNUdbdmysql
+apr-util-1.6.1/dbd/apr_dbd_oracle.dep
+apr-util-1.6.1/dbd/apr_dbd_odbc.dep
+apr-util-1.6.1/dbd/apr_dbd_oracle.c
+apr-util-1.6.1/dbd/apr_dbd_sqlite2.mak
+apr-util-1.6.1/dbd/apr_dbd_pgsql.mak
+apr-util-1.6.1/docs/
+apr-util-1.6.1/docs/doxygen.conf
+apr-util-1.6.1/libaprutil.rc
+apr-util-1.6.1/aprutil.mak
+apr-util-1.6.1/buildconf
+apr-util-1.6.1/CHANGES
+apr-util-1.6.1/aprutil.dep
+apr-util-1.6.1/libaprutil.dep
+apr-util-1.6.1/README.cmake
+apr-util-1.6.1/LICENSE
+apr-util-1.6.1/hooks/
+apr-util-1.6.1/hooks/apr_hooks.c
+apr-util-1.6.1/apu-config.in
+apr-util-1.6.1/NWGNUmakefile
+apr-util-1.6.1/buckets/
+apr-util-1.6.1/buckets/apr_buckets_socket.c
+apr-util-1.6.1/buckets/apr_brigade.c
+apr-util-1.6.1/buckets/apr_buckets_refcount.c
+apr-util-1.6.1/buckets/apr_buckets_simple.c
+apr-util-1.6.1/buckets/apr_buckets_file.c
+apr-util-1.6.1/buckets/apr_buckets_pool.c
+apr-util-1.6.1/buckets/apr_buckets_pipe.c
+apr-util-1.6.1/buckets/apr_buckets_eos.c
+apr-util-1.6.1/buckets/apr_buckets_flush.c
+apr-util-1.6.1/buckets/apr_buckets_mmap.c
+apr-util-1.6.1/buckets/apr_buckets.c
+apr-util-1.6.1/buckets/apr_buckets_heap.c
+apr-util-1.6.1/buckets/apr_buckets_alloc.c
+apr-util-1.6.1/configure
+apr-util-1.6.1/xlate/
+apr-util-1.6.1/xlate/xlate.c
+apr-util-1.6.1/README
+apr-util-1.6.1/aprutil.dsw
+apr-util-1.6.1/include/
+apr-util-1.6.1/include/apr_ldap.hnw
+apr-util-1.6.1/include/apr_uuid.h
+apr-util-1.6.1/include/apr_ldap.hwc
+apr-util-1.6.1/include/apu.hnw
+apr-util-1.6.1/include/apr_xlate.h
+apr-util-1.6.1/include/apu.hwc
+apr-util-1.6.1/include/apr_base64.h
+apr-util-1.6.1/include/apr_md5.h
+apr-util-1.6.1/include/apr_strmatch.h
+apr-util-1.6.1/include/apr_thread_pool.h
+apr-util-1.6.1/include/apr_dbm.h
+apr-util-1.6.1/include/apr_crypto.h
+apr-util-1.6.1/include/apr_sha1.h
+apr-util-1.6.1/include/apr_md4.h
+apr-util-1.6.1/include/apr_anylock.h
+apr-util-1.6.1/include/apr_ldap_url.h
+apr-util-1.6.1/include/apr_ldap_option.h
+apr-util-1.6.1/include/apr_sdbm.h
+apr-util-1.6.1/include/apr_ldap_init.h
+apr-util-1.6.1/include/apr_rmm.h
+apr-util-1.6.1/include/apr_optional_hooks.h
+apr-util-1.6.1/include/apr_queue.h
+apr-util-1.6.1/include/apu.h.in
+apr-util-1.6.1/include/apu_want.hw
+apr-util-1.6.1/include/apu_version.h
+apr-util-1.6.1/include/private/
+apr-util-1.6.1/include/private/apr_dbd_odbc_v2.h
+apr-util-1.6.1/include/private/apu_select_dbm.hw
+apr-util-1.6.1/include/private/apu_config.h.in
+apr-util-1.6.1/include/private/apr_dbm_private.h
+apr-util-1.6.1/include/private/apr_crypto_internal.h
+apr-util-1.6.1/include/private/apu_config.hnw
+apr-util-1.6.1/include/private/apr_dbd_internal.h
+apr-util-1.6.1/include/private/apu_config.hw
+apr-util-1.6.1/include/private/apu_select_dbm.h.in
+apr-util-1.6.1/include/private/apu_internal.h
+apr-util-1.6.1/include/apr_uri.h
+apr-util-1.6.1/include/apu_want.h.in
+apr-util-1.6.1/include/apr_memcache.h
+apr-util-1.6.1/include/apr_ldap.h.in
+apr-util-1.6.1/include/apu_want.hnw
+apr-util-1.6.1/include/apr_hooks.h
+apr-util-1.6.1/include/apr_ldap_rebind.h
+apr-util-1.6.1/include/apr_date.h
+apr-util-1.6.1/include/apr_buckets.h
+apr-util-1.6.1/include/apr_redis.h
+apr-util-1.6.1/include/apu.hw
+apr-util-1.6.1/include/apr_optional.h
+apr-util-1.6.1/include/apr_siphash.h
+apr-util-1.6.1/include/apr_xml.h
+apr-util-1.6.1/include/apr_ldap.hw
+apr-util-1.6.1/include/apr_reslist.h
+apr-util-1.6.1/include/apu_errno.h
+apr-util-1.6.1/include/apr_dbd.h
+apr-util-1.6.1/renames_pending
+apr-util-1.6.1/Makefile.in
+apr-util-1.6.1/libaprutil.mak
+apr-util-1.6.1/build.conf
+apr-util-1.6.1/test/
+apr-util-1.6.1/test/testsiphash.c
+apr-util-1.6.1/test/Makefile.win
+apr-util-1.6.1/test/testutil.h
+apr-util-1.6.1/test/testdate.c
+apr-util-1.6.1/test/abts.c
+apr-util-1.6.1/test/testxml.c
+apr-util-1.6.1/test/testrmm.c
+apr-util-1.6.1/test/testldap.c
+apr-util-1.6.1/test/testqueue.c
+apr-util-1.6.1/test/testpass.c
+apr-util-1.6.1/test/NWGNUaputest
+apr-util-1.6.1/test/abts_tests.h
+apr-util-1.6.1/test/testall.dsw
+apr-util-1.6.1/test/testdbm.c
+apr-util-1.6.1/test/nw_misc.c
+apr-util-1.6.1/test/testmd5.c
+apr-util-1.6.1/test/NWGNUmakefile
+apr-util-1.6.1/test/testreslist.c
+apr-util-1.6.1/test/dbd.c
+apr-util-1.6.1/test/testredis.c
+apr-util-1.6.1/test/teststrmatch.c
+apr-util-1.6.1/test/Makefile.in
+apr-util-1.6.1/test/testutil.c
+apr-util-1.6.1/test/test_apu.h
+apr-util-1.6.1/test/data/
+apr-util-1.6.1/test/data/billion-laughs.xml
+apr-util-1.6.1/test/abts.h
+apr-util-1.6.1/test/testutillib.dsp
+apr-util-1.6.1/test/testcrypto.c
+apr-util-1.6.1/test/testbuckets.c
+apr-util-1.6.1/test/testmemcache.c
+apr-util-1.6.1/test/testuuid.c
+apr-util-1.6.1/test/testdbd.c
+apr-util-1.6.1/test/testxlate.c
+apr-util-1.6.1/test/testuri.c
+apr-util-1.6.1/test/testutildll.dsp
+apr-util-1.6.1/test/testmd4.c
+apr-util-1.6.1/encoding/
+apr-util-1.6.1/encoding/apr_base64.c
+apr-util-1.6.1/misc/
+apr-util-1.6.1/misc/apu_version.c
+apr-util-1.6.1/misc/apr_reslist.c
+apr-util-1.6.1/misc/apu_dso.c
+apr-util-1.6.1/misc/apr_queue.c
+apr-util-1.6.1/misc/apr_thread_pool.c
+apr-util-1.6.1/misc/apr_date.c
+apr-util-1.6.1/misc/apr_rmm.c
+apr-util-1.6.1/build-outputs.mk
+apr-util-1.6.1/crypto/
+apr-util-1.6.1/crypto/getuuid.c
+apr-util-1.6.1/crypto/uuid.c
+apr-util-1.6.1/crypto/apr_md4.c
+apr-util-1.6.1/crypto/apr_crypto_openssl.c
+apr-util-1.6.1/crypto/apr_crypto_nss.c
+apr-util-1.6.1/crypto/apr_crypto.c
+apr-util-1.6.1/crypto/apr_crypto_commoncrypto.c
+apr-util-1.6.1/crypto/crypt_blowfish.c
+apr-util-1.6.1/crypto/apr_crypto_nss.dep
+apr-util-1.6.1/crypto/apr_crypto_openssl.dsp
+apr-util-1.6.1/crypto/apr_crypto_openssl.mak
+apr-util-1.6.1/crypto/crypt_blowfish.h
+apr-util-1.6.1/crypto/apr_passwd.c
+apr-util-1.6.1/crypto/apr_siphash.c
+apr-util-1.6.1/crypto/apr_md5.c
+apr-util-1.6.1/crypto/apr_crypto_openssl.dep
+apr-util-1.6.1/crypto/apr_crypto_nss.mak
+apr-util-1.6.1/crypto/apr_crypto_nss.dsp
+apr-util-1.6.1/crypto/apr_sha1.c
+apr-util-1.6.1/memcache/
+apr-util-1.6.1/memcache/apr_memcache.c
+apr-util-1.6.1/xml/
+apr-util-1.6.1/xml/apr_xml.c
+apr-util-1.6.1/xml/NWGNUmakefile
+apr-util-1.6.1/export_vars.sh.in
+apr-util-1.6.1/build/
+apr-util-1.6.1/build/rpm/
+apr-util-1.6.1/build/rpm/apr-util.spec.in
+apr-util-1.6.1/build/pkg/
+apr-util-1.6.1/build/pkg/buildpkg.sh
+apr-util-1.6.1/build/pkg/pkginfo.in
+apr-util-1.6.1/build/pkg/README
+apr-util-1.6.1/build/mkdir.sh
+apr-util-1.6.1/build/apr_common.m4
+apr-util-1.6.1/build/config.guess
+apr-util-1.6.1/build/preaprutil.dsp
+apr-util-1.6.1/build/dbd.m4
+apr-util-1.6.1/build/find_apr.m4
+apr-util-1.6.1/build/apu-hints.m4
+apr-util-1.6.1/build/nw_apu_export.inc
+apr-util-1.6.1/build/apu-iconv.m4
+apr-util-1.6.1/build/config.sub
+apr-util-1.6.1/build/install.sh
+apr-util-1.6.1/build/crypto.m4
+apr-util-1.6.1/build/find_apu.m4
+apr-util-1.6.1/build/w32locatedb.pl
+apr-util-1.6.1/build/apu-conf.m4
+apr-util-1.6.1/build/dbm.m4
+apr-util-1.6.1/build/get-version.sh
+apr-util-1.6.1/build/dso.m4
+apr-util-1.6.1/aprutil.dsp
+apr-util-1.6.1/dbm/
+apr-util-1.6.1/dbm/apr_dbm_gdbm.c
+apr-util-1.6.1/dbm/apr_dbm_gdbm.dep
+apr-util-1.6.1/dbm/sdbm/
+apr-util-1.6.1/dbm/sdbm/sdbm_lock.c
+apr-util-1.6.1/dbm/sdbm/sdbm_pair.h
+apr-util-1.6.1/dbm/sdbm/sdbm.c
+apr-util-1.6.1/dbm/sdbm/sdbm_tune.h
+apr-util-1.6.1/dbm/sdbm/sdbm_pair.c
+apr-util-1.6.1/dbm/sdbm/sdbm_private.h
+apr-util-1.6.1/dbm/sdbm/sdbm_hash.c
+apr-util-1.6.1/dbm/apr_dbm_ndbm.c
+apr-util-1.6.1/dbm/NWGNUmakefile
+apr-util-1.6.1/dbm/apr_dbm_db.mak
+apr-util-1.6.1/dbm/NWGNUdbmgdbm
+apr-util-1.6.1/dbm/apr_dbm.c
+apr-util-1.6.1/dbm/apr_dbm_sdbm.c
+apr-util-1.6.1/dbm/apr_dbm_db.dsp
+apr-util-1.6.1/dbm/apr_dbm_db.dep
+apr-util-1.6.1/dbm/apr_dbm_berkeleydb.c
+apr-util-1.6.1/dbm/apr_dbm_gdbm.dsp
+apr-util-1.6.1/dbm/NWGNUdbmdb
+apr-util-1.6.1/dbm/apr_dbm_gdbm.mak
+--> ../apr-util-1.6.1/configure --prefix=. --with-apr=.
+configure: error: expected an absolute directory name for --prefix: .
+Could not configure apr-util

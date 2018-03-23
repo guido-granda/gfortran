@@ -1,0 +1,12 @@
+#! /bin/sh
+#
+# Created by configure
+
+CC="gcc"; export CC
+LDFLAGS="-L/home/guido/test/lib:/home/guido/test/lib64"; export LDFLAGS
+"../apr-util-1.6.1/configure" \
+"--prefix=/home/guido/test" \
+"--with-apr=/home/guido/test" \
+"CC=gcc" \
+"LDFLAGS=-L/home/guido/test/lib:/home/guido/test/lib64" \
+"$@"
